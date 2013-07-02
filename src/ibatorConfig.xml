@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ibatorConfiguration PUBLIC "-//Apache Software Foundation//DTD Apache iBATIS Ibator Configuration 1.0//EN" "http://ibatis.apache.org/dtd/ibator-config_1_0.dtd" >
+<ibatorConfiguration >
+<classPathEntry location="/Developer/git/girlspic-plus/gp-db/libs/mysql-connector-java-5.1.17.jar"/>
+  <ibatorContext id="context1" targetRuntime="Ibatis2Java5">
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/girlspic_plus" userId="root" password="" />
+<!--
+    <javaModelGenerator targetPackage="jp.girlspic.plus.entity.dto" targetProject="girlspic_plus_core" />
+    <sqlMapGenerator targetPackage="sqlmap" targetProject="girlspic-db" />
+    <daoGenerator targetPackage="jp.girlspic.plus.entity.dao" targetProject="girlspic_plus_core" type="GENERIC-CI" />
+-->
+
+    <javaModelGenerator targetPackage="dto" targetProject="gp-db" />
+    <sqlMapGenerator targetPackage="sqlmap" targetProject="gp-db" />
+    <daoGenerator targetPackage="dao" targetProject="gp-db" type="GENERIC-CI" />
+
+
+<!--    <table schema="girls_pic_plus_simple" tableName="%" >-->
+<!--        <columnOverride column="useActualColumnNames" property="true" />   -->
+<!--    </table>-->
+
+    <table schema="girlspic_plus" tableName="advertise_info" ></table>
+  </ibatorContext>
+</ibatorConfiguration>
